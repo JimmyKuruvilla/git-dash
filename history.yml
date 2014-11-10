@@ -1,0 +1,28 @@
+---
+valuation: |+
+  data: {"current":94,"last":92,"id":"valuation","updatedAt":1415604475}
+
+karma: |+
+  data: {"current":79441,"last":45287,"id":"karma","updatedAt":1415604475}
+
+synergy: |+
+  data: {"value":62,"id":"synergy","updatedAt":1415604475}
+
+convergence: |+
+  data: {"points":[{"x":43,"y":25},{"x":44,"y":25},{"x":45,"y":44},{"x":46,"y":6},{"x":47,"y":8},{"x":48,"y":9},{"x":49,"y":3},{"x":50,"y":34},{"x":51,"y":49},{"x":52,"y":43}],"id":"convergence","updatedAt":1415604475}
+
+buzzwords: |+
+  data: {"items":[{"label":"Synergy","value":28},{"label":"Turn-key","value":27},{"label":"Paradigm shift","value":19},{"label":"Enterprise","value":22},{"label":"Pivoting","value":25},{"label":"Streamlininess","value":16},{"label":"Exit strategy","value":19},{"label":"Leverage","value":22},{"label":"Web 2.0","value":20}],"id":"buzzwords","updatedAt":1415603620}
+
+mychart: |+
+  data: {"points":[["Lab","Started","Completed"],["2004",1000,400],["2005",1170,460],["2006",660,1120],["2007",1030,540]],"id":"mychart","updatedAt":1415593863}
+
+synergy1: |+
+  data: {"value":19,"id":"synergy1","updatedAt":1415595707}
+
+labs: |+
+  data: {"forks":[],"pulls":[],"id":"labs","updatedAt":1415604472}
+
+pullrequests: |+
+  data: {"items":[{"label":"JimmyKuruvilla","value":"done"},{"label":"JimmyKuruvilla","value":"done"},{"label":"JimmyKuruvilla","value":"done"},{"label":"JimmyKuruvilla","value":"complete!"},{"label":"JimmyKuruvilla","value":"doneONE!"},{"label":"changamanda","value":"Tests pass"},{"label":"JimmyKuruvilla","value":"donese"},{"label":"samvantran","value":"all systems go"},{"label":"Sailorflares","value":"passing"},{"label":"daniellecs","value":"finished sessions"},{"label":"natekratchman","value":"woop woop"},{"label":"karimbutt","value":"fixed test issues"},{"label":"strohy1210","value":"yay sessions"},{"label":"amshane","value":"sessions are done"},{"label":"blakedeboer","value":"done"},{"label":"molgin","value":"make authorization make sense"},{"label":"thinhthinh","value":"Prof(r)esh blogging"},{"label":"jmoses89","value":"donezo"},{"label":"catarak","value":"DONE"},{"label":"fkenji","value":"implemented"}],"id":"pullrequests","updatedAt":1415604472}
+
