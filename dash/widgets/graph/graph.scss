@@ -19,8 +19,8 @@ $tick-color:        rgba(0, 0, 0, 0.4);
 
   svg {
     position: absolute;
-    opacity: 1;
-    fill-opacity: 1;
+    opacity: 0.4;
+    fill-opacity: 0.4;
     left: 0px;
     top: 0px;
   }
@@ -39,7 +39,6 @@ $tick-color:        rgba(0, 0, 0, 0.4);
     font-weight: 600;
     font-size: 20px;
     margin-top: 0;
-    z-index: 99;
   }
 
   .x_tick {
@@ -62,11 +61,5 @@ $tick-color:        rgba(0, 0, 0, 0.4);
   .domain {
     display: none;
   }
-
-.legend {
-        display: inline-block;
-        vertical-align: top;
-        margin: 0 0 0 10px;
-}
 
 }

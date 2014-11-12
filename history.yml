@@ -1,15 +1,15 @@
 ---
 valuation: |+
-  data: {"current":94,"last":92,"id":"valuation","updatedAt":1415604475}
+  data: {"current":61,"last":96,"id":"valuation","updatedAt":1415769137}
 
 karma: |+
-  data: {"current":79441,"last":45287,"id":"karma","updatedAt":1415604475}
+  data: {"current":45346,"last":59869,"id":"karma","updatedAt":1415769137}
 
 synergy: |+
-  data: {"value":62,"id":"synergy","updatedAt":1415604475}
+  data: {"value":16,"id":"synergy","updatedAt":1415769137}
 
 convergence: |+
-  data: {"points":[{"x":43,"y":25},{"x":44,"y":25},{"x":45,"y":44},{"x":46,"y":6},{"x":47,"y":8},{"x":48,"y":9},{"x":49,"y":3},{"x":50,"y":34},{"x":51,"y":49},{"x":52,"y":43}],"id":"convergence","updatedAt":1415604475}
+  data: {"points":[{"x":17,"y":9},{"x":18,"y":9},{"x":19,"y":35},{"x":20,"y":16},{"x":21,"y":28},{"x":22,"y":47},{"x":23,"y":32},{"x":24,"y":42},{"x":25,"y":48},{"x":26,"y":23}],"id":"convergence","updatedAt":1415760820}
 
 buzzwords: |+
   data: {"items":[{"label":"Synergy","value":28},{"label":"Turn-key","value":27},{"label":"Paradigm shift","value":19},{"label":"Enterprise","value":22},{"label":"Pivoting","value":25},{"label":"Streamlininess","value":16},{"label":"Exit strategy","value":19},{"label":"Leverage","value":22},{"label":"Web 2.0","value":20}],"id":"buzzwords","updatedAt":1415603620}
@@ -21,8 +21,8 @@ synergy1: |+
   data: {"value":19,"id":"synergy1","updatedAt":1415595707}
 
 labs: |+
-  data: {"forks":[],"pulls":[],"id":"labs","updatedAt":1415604472}
+  data: {"forks":[{"x":0,"y":48},{"x":1,"y":47}],"pulls":[{"x":0,"y":45},{"x":1,"y":11}],"id":"labs","updatedAt":1415769137}
 
 pullrequests: |+
-  data: {"items":[{"label":"JimmyKuruvilla","value":"done"},{"label":"JimmyKuruvilla","value":"done"},{"label":"JimmyKuruvilla","value":"done"},{"label":"JimmyKuruvilla","value":"complete!"},{"label":"JimmyKuruvilla","value":"doneONE!"},{"label":"changamanda","value":"Tests pass"},{"label":"JimmyKuruvilla","value":"donese"},{"label":"samvantran","value":"all systems go"},{"label":"Sailorflares","value":"passing"},{"label":"daniellecs","value":"finished sessions"},{"label":"natekratchman","value":"woop woop"},{"label":"karimbutt","value":"fixed test issues"},{"label":"strohy1210","value":"yay sessions"},{"label":"amshane","value":"sessions are done"},{"label":"blakedeboer","value":"done"},{"label":"molgin","value":"make authorization make sense"},{"label":"thinhthinh","value":"Prof(r)esh blogging"},{"label":"jmoses89","value":"donezo"},{"label":"catarak","value":"DONE"},{"label":"fkenji","value":"implemented"}],"id":"pullrequests","updatedAt":1415604472}
+  data: {"items":[{"label":"karimbutt finished: ","value":"intro-to-js-and-jasmine-ruby-006 and said: dominated"},{"label":"strohy1210 finished: ","value":"intro-to-js-and-jasmine-ruby-006 and said: made tests pass"},{"label":"Sailorflares finished: ","value":"rails-blog-sessions-ruby-006 and said: dominated"},{"label":"Sailorflares finished: ","value":"intro-to-js-and-jasmine-ruby-006 and said: dominated"},{"label":"molgin finished: ","value":"rails-blog-sessions-ruby-006 and said: made tests pass"},{"label":"Sailorflares finished: ","value":"rails-blog-sessions-ruby-006 and said: rails rails rails"},{"label":"fkenji finished: ","value":"rails-blog-sessions-ruby-006 and said: DONE"},{"label":"thinhthinh finished: ","value":"rails-blog-sessions-ruby-006 and said: finally done!"},{"label":"Sailorflares finished: ","value":"intro-to-js-and-jasmine-ruby-006 and said: st paddy's day parade"},{"label":"amshane finished: ","value":"rails-blog-sessions-ruby-006 and said: completed testing"},{"label":"thinhthinh finished: ","value":"intro-to-js-and-jasmine-ruby-006 and said: finally done!"},{"label":"molgin finished: ","value":"rails-blog-sessions-ruby-006 and said: completed testing"}],"id":"pullrequests","updatedAt":1415769137}
 
