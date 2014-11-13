@@ -27,8 +27,8 @@ require 'yaml'
   yp0, yp1=-42,-42
 
 
-SCHEDULER.every '1s' do
-  demo=true
+SCHEDULER.every '3s' do
+  demo=false
   run_count+=1
   if !demo
     graph_counter=0
@@ -54,7 +54,6 @@ SCHEDULER.every '1s' do
         # {"flatiron-school-ironboard/rails-blog-sessions-ruby-006"=>{:forks_count=>23}}
 
         client.pulls(repo.full_name).each do |pull|
-          pulls_count+=1
           pulls_hash[pull.html_url][:name]=pull[:user][:login]
           pulls_hash[pull.html_url][:created_at]=pull[:created_at]
           pulls_hash[pull.html_url][:title]=pull[:title]
@@ -98,6 +97,7 @@ SCHEDULER.every '1s' do
     pulls_changes_hash.each do |key, value_hash|
       formatted_key=key.match(/https:\/\/github.com\/(.*)\/pull/)[1]
       graph_key=key.match(/https.*ironboard\/(.*)\/pull\//)[1]
+      pulls_count=key.match(/.+\/(.+)/)[1].to_i
       if graph_hash.has_key?(formatted_key)#match the fork key from the pull key
         pulls_data<< {x: graph_hash[formatted_key].to_i , y: pulls_count }
         pulls_msg_data<<{label: value_hash[:name]+" finished: ", value: graph_key +" and said: "+ value_hash[:title]}
