@@ -24,6 +24,8 @@ class Dashing.Graph extends Dashing.Widget
       element: @node
       width: width
       height: height
+      min: 0
+      max: 50
       renderer: 'bar'
       stroke: true
       series: [
@@ -49,8 +51,8 @@ class Dashing.Graph extends Dashing.Widget
         graph: @graph
       } )
 
-    
     y_axis = new Rickshaw.Graph.Axis.Y(graph: @graph, tickFormat: Rickshaw.Fixtures.Number.formatKMBT)
+    
 
  
     @graph.render()

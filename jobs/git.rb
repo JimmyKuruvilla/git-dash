@@ -2,6 +2,7 @@
 ##concurrency
 ##caching
 ##check if changed, header 304
+##new widget to coorindate with IOS app
 require 'octokit'
 require 'yaml'
 
@@ -17,16 +18,19 @@ require 'yaml'
   old_forks_hash={}
   run_count=0
   graph_hash={}
-  old_forks_data=[{x: 0, y:20}, {x:1, y: 60}]
-  old_pulls_data=[{x:0, y: (-20+16)}, {x:1, y: (-60+30)}]#-forks y+pulls y
+  # old_forks_data=[{x: 0, y:20}, {x:1, y: 60}]
+  # old_pulls_data=[{x:0, y: (-20+16)}, {x:1, y: (-60+30)}]#-forks y+pulls y
+  old_forks_data=[{x: 0, y: 0}, {x: 1, y: 0}]
+  old_pulls_data=[{x: 0, y: 0}, {x: 1, y: 0}]
   pulls_msg_data=[]
-  y0=0
-  y1=0
+  yf0,yf1, tnum1, tnum2=0,0,0,0
+  yp0, yp1=-42,-42
 
-SCHEDULER.every '3s' do
+
+SCHEDULER.every '1s' do
   demo=true
+  run_count+=1
   if !demo
-    run_count+=1
     graph_counter=0
 
     pulls_count=0
@@ -106,15 +110,47 @@ SCHEDULER.every '3s' do
     end
 
   else#demo code
-    y0+=4
-    y1+=1
+    max=42
+    tnum1+=5
+    tnum2+=5
 
-    forks_data=[{x: 0, y: y0}, {x:1, y: y0-1}]
-    pulls_data=[{x:0, y: y0-3}, {x:1, y: y1-1}]
-    names=["fkenji", "thinhthinh", "molgin", "strohy1210", "amshane", "jmoses89", "karimbutt", "daniellecs", "Sailorflares", "samvantran", "chanamanda"]
+    yf0+=5
+    if yf0>=42
+      yf0=42
+    end
+
+    if yf0==42
+      yp0+=5
+      if yp0>=0
+        yp0=0
+      end
+    end
+
+    if yp0>-30
+      yf1+=5
+      if yf1>=42
+        yf1=42
+      end
+    end
+
+    if yf1==42
+      yp1+=5
+      if yp1>=0
+        yp1=0
+      end
+    end
+
+    
+    forks_data=[{x: 0, y: yf0}, {x:1, y: yf1}]
+    pulls_data=[{x:0, y: yp0}, {x:1, y: yp1}]
+
+    names=["fkenji", "thinhthinh", "molgin", "strohy1210", "amshane", "jmoses89", "karimbutt", "daniellecs", "Sailorflares", "samvantran", "changamanda"]
     repos=["rails-blog-sessions-ruby-006","intro-to-js-and-jasmine-ruby-006"]
     said=["dominated", "rails rails rails", "finally done!", "DONE", "completed testing", "made tests pass", "st paddy's day parade"]
-    pulls_msg_data<<{label: (names.sample + " finished: "), value: (repos.sample + " and said: "+ said.sample)}
+    if run_count%4==0
+      pulls_msg_data<<{label: (names.sample + " finished: "), value: (repos.sample + " and said: "+ said.sample)}
+    end
+    
   end#end if block for demos
  
  #sort forks and pulls by x ORDER to avoid halts
@@ -135,7 +171,7 @@ SCHEDULER.every '3s' do
   end
 
   send_event('pullrequests', { items: pulls_msg_data })
-
+  send_event('photo', { items: pulls_msg_data })
 # always display old data if there is no new data
   if forks_data==[] && pulls_data==[]
     send_event('labs', forks: old_forks_data, pulls: old_pulls_data)
@@ -160,6 +196,8 @@ SCHEDULER.every '3s' do
   p "old_forks_data #{old_forks_data}"
   p "old_pulls_data #{old_pulls_data}"
   p "graph_hash #{graph_hash}"
+##caching
+##check if changed, he
   p "run_count #{run_count}"
   p client.rate_limit.remaining
 end#scheduler end
