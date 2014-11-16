@@ -6,4 +6,3 @@ class Dashing.List extends Dashing.Widget
       $(@node).find('ul').remove()
       
 onData: (data) ->
-  $(@node).fadeOut().fadeIn()

@@ -28,7 +28,7 @@ require 'yaml'
 
 
 SCHEDULER.every '3s' do
-  demo=false
+  demo=true
   run_count+=1
   if !demo
     graph_counter=0
