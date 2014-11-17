@@ -5,9 +5,10 @@
 ##new widget to coorindate with IOS app
 require 'octokit'
 require 'yaml'
-
+require 'dotenv'
+Dotenv.load
 # # # Octokit.auto_paginate = true
-  client = Octokit::Client.new(:access_token=>"e71797d2467099d04491afd5458d0deaa1a9af7c")
+  client = Octokit::Client.new(:access_token=>ENV['git_key'])
   user=client.user
   user.login
 
